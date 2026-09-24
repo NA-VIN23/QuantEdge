@@ -1,0 +1,1 @@
+# QuantEdge — quant.data package
