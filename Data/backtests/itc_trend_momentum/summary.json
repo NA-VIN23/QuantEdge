@@ -1,0 +1,37 @@
+{
+  "initial_capital": 100000.0,
+  "final_equity": 91464.7094,
+  "total_net_pnl": -8535.2906,
+  "total_return_pct": -8.5353,
+  "num_signals_total": 137,
+  "num_signals_executed": 70,
+  "num_signals_skipped": 67,
+  "num_trades": 70,
+  "num_wins": 23,
+  "num_losses": 47,
+  "win_rate": 0.3286,
+  "avg_net_pnl": -121.9327,
+  "avg_win_pnl": 1293.5923,
+  "avg_loss_pnl": -814.6365,
+  "profit_factor": 0.7771,
+  "max_drawdown_pct": -25.143,
+  "avg_holding_days": 21.8429,
+  "exposure_pct": 22.22,
+  "best_trade_net_pnl": 4190.3673,
+  "worst_trade_net_pnl": -1097.8343,
+  "exit_reason_counts": {
+    "TREND_EXIT": 37,
+    "STOP_LOSS": 33
+  },
+  "skip_reason_counts": {
+    "SKIPPED_IN_POSITION": 67
+  },
+  "backtest_config": {
+    "initial_capital": 100000.0,
+    "risk_per_trade": 0.01,
+    "atr_multiplier": 2.0,
+    "commission_rate": 0.0005,
+    "slippage_rate": 0.0005,
+    "symbol": "ITC"
+  }
+}
