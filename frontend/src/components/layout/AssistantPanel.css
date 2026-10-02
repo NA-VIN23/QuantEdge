@@ -1,0 +1,184 @@
+.assistant-panel {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 400px;
+  height: 100vh;
+  background-color: var(--surface);
+  border-left: 1px solid var(--border);
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.assistant-panel.open {
+  right: 0;
+}
+
+.assistant-toggle {
+  position: absolute;
+  top: 50%;
+  left: -40px;
+  transform: translateY(-50%) rotate(-90deg);
+  transform-origin: left top;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px 4px 0 0;
+  font-weight: 500;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+  white-space: nowrap;
+}
+
+.assistant-toggle:hover {
+  background-color: var(--primary-dark);
+}
+
+.assistant-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 16px;
+}
+
+.assistant-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.assistant-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.assistant-symbol-badge {
+  background-color: var(--primary-light);
+  color: var(--primary-dark);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.assistant-messages {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-right: 4px;
+}
+
+.assistant-empty {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-top: 20px;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  max-width: 85%;
+}
+
+.message.user {
+  align-self: flex-end;
+}
+
+.message.assistant {
+  align-self: flex-start;
+}
+
+.message-content {
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  white-space: pre-wrap;
+}
+
+.message.user .message-content {
+  background-color: var(--primary);
+  color: white;
+  border-bottom-right-radius: 0;
+}
+
+.message.assistant .message-content {
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-bottom-left-radius: 0;
+}
+
+.message.loading .message-content {
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+.assistant-error {
+  color: #dc3545;
+  background-color: #f8d7da;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.assistant-sources {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  background-color: var(--background);
+  padding: 8px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid var(--border);
+}
+
+.assistant-sources ul {
+  margin: 4px 0 0 0;
+  padding-left: 20px;
+}
+
+.assistant-input-form {
+  display: flex;
+  gap: 8px;
+}
+
+.assistant-input-form input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.assistant-input-form input:focus {
+  border-color: var(--primary);
+}
+
+.assistant-input-form button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 0 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.assistant-input-form button:disabled {
+  background-color: var(--border);
+  cursor: not-allowed;
+}

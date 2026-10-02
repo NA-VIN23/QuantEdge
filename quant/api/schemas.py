@@ -159,3 +159,19 @@ class DataQualityReport(BaseModel):
     cleaning_issue_count: int
     status: str
     generated_at: str
+
+# ---------------------------------------------------------------------------
+# Sprint 7 AI Research Assistant
+# ---------------------------------------------------------------------------
+
+class ChatMessage(BaseModel):
+    role: str       # "user" or "assistant"
+    content: str    # the message content
+
+class ChatRequest(BaseModel):
+    symbol: str
+    messages: list[ChatMessage]
+
+class ChatResponse(BaseModel):
+    reply: str
+    sources: list[str]
