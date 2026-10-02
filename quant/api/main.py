@@ -17,7 +17,7 @@ from __future__ import annotations
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from quant.api.routes import overview, stocks, backtests, data_quality
+from quant.api.routes import overview, stocks, backtests, data_quality, assistant
 
 app = FastAPI(
     title="QuantEdge Research API",
@@ -48,6 +48,7 @@ app.include_router(overview.router, prefix="/api")
 app.include_router(stocks.router,   prefix="/api")
 app.include_router(backtests.router, prefix="/api")
 app.include_router(data_quality.router, prefix="/api")
+app.include_router(assistant.router, prefix="/api")
 
 
 @app.get("/api/health")

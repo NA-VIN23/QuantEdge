@@ -69,3 +69,38 @@ export const api = {
     return get(`/data-quality/${encodeURIComponent(symbol)}`);
   },
 };
+
+// Sprint 7 AI Chat Types
+export interface ChatMessage {
+  role: 'user' | 'assistant';
+  content: string;
+}
+
+export interface ChatRequest {
+  symbol: string;
+  messages: ChatMessage[];
+}
+
+export interface ChatResponse {
+  reply: string;
+  sources: string[];
+}
+
+export const sendChatMessage = async (
+  request: ChatRequest
+): Promise<ChatResponse> => {
+  const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:8000/api'}/assistant/chat`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(request),
+  });
+
+  if (!response.ok) {
+    const errorText = await response.text();
+    throw new Error(`Chat API error: ${response.status} - ${errorText}`);
+  }
+
+  return response.json();
+};

@@ -8,6 +8,7 @@ import { StockAnalysis } from './pages/StockAnalysis';
 import { BacktestLab }   from './pages/BacktestLab';
 import { TradeJournal }  from './pages/TradeJournal';
 import { DataCenter }    from './pages/DataCenter';
+import { AssistantPanel } from './components/layout/AssistantPanel';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Sidebar />
         <div className="main-area">
           <Header />
+          <AssistantPanel />
           <Routes>
             <Route path="/"                   element={<Overview />}      />
             {/* Parameterized routes (Sprint 5) */}
