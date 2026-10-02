@@ -18,42 +18,49 @@ function MetricRow({ label, value, ok }: MetricRowProps) {
   );
 }
 
-const PIPELINE_STEPS = [
-  {
-    name: 'Raw CSV',
-    desc: 'data/raw/ITC Stock Price History.csv — source file, never modified',
-  },
-  {
-    name: 'Ingestion',
-    desc: 'quant.data.ingestion — load raw strings, verify SHA-256, detect columns',
-  },
-  {
-    name: 'Cleaning',
-    desc: 'quant.data.cleaning — parse dates (MM/DD/YYYY → YYYY-MM-DD), parse numerics, remove commas',
-  },
-  {
-    name: 'Validation',
-    desc: 'quant.data.validation — OHLC consistency, volume, date monotonicity, change % check',
-  },
-  {
-    name: 'Canonical Dataset',
-    desc: 'data/processed/itc_daily_clean.csv — reproducible, deterministic output',
-  },
-  {
-    name: 'Feature Dataset',
-    desc: 'quant.features — EMA20/50, SMA20/50, ATR14, volume ratio, momentum, signals → itc_features.csv',
-  },
-  {
-    name: 'Backtest',
-    desc: 'quant.backtest — Sprint 3 simulation engine → trades.csv, equity_curve.csv, summary.json',
-  },
-];
+function getPipelineSteps(symbol: string) {
+  const isItc = symbol === 'ITC';
+  const rawFile = isItc ? 'Data/raw/ITC Stock Price History.csv' : `Data/raw/stocks/${symbol}.csv`;
+  const cleanFile = `Data/processed/stocks/${symbol}.csv`;
+  const featFile = `Data/processed/stocks/${symbol}_features.csv`;
+  return [
+    {
+      name: 'Raw CSV',
+      desc: `${rawFile} — source file, never modified`,
+    },
+    {
+      name: 'Ingestion',
+      desc: 'quant.data.ingestion — load raw strings, verify SHA-256, detect columns',
+    },
+    {
+      name: 'Cleaning',
+      desc: 'quant.data.cleaning — parse dates (MM/DD/YYYY → YYYY-MM-DD), parse numerics, remove commas',
+    },
+    {
+      name: 'Validation',
+      desc: 'quant.data.validation — OHLC consistency, volume, date monotonicity, change % check',
+    },
+    {
+      name: 'Canonical Dataset',
+      desc: `${cleanFile} — reproducible, deterministic output`,
+    },
+    {
+      name: 'Feature Dataset',
+      desc: `quant.features — EMA20/50, SMA20/50, ATR14, volume ratio, momentum, signals → ${featFile}`,
+    },
+    {
+      name: 'Backtest',
+      desc: `quant.backtest — simulation engine → Data/backtests/${symbol}/ (trades, equity, summary)`,
+    },
+  ];
+}
 
 export function DataCenter() {
   const { symbol = 'ITC' } = useParams<{ symbol: string }>();
   const [report, setReport] = useState<DataQualityReport | null>(null);
   const [error, setError]   = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
+  const pipelineSteps = getPipelineSteps(symbol);
 
   useEffect(() => {
     api.dataQuality(symbol)
@@ -134,13 +141,13 @@ export function DataCenter() {
         </div>
         <div className="card">
           <div className="pipeline" id="data-pipeline">
-            {PIPELINE_STEPS.map((step, i) => (
+            {pipelineSteps.map((step, i) => (
               <div className="pipeline-step" key={step.name}>
                 <div className="pipeline-connector">
-                  <div className={`pipeline-node ${i === PIPELINE_STEPS.length - 1 ? 'active' : ''}`}>
+                  <div className={`pipeline-node ${i === pipelineSteps.length - 1 ? 'active' : ''}`}>
                     {i + 1}
                   </div>
-                  {i < PIPELINE_STEPS.length - 1 && <div className="pipeline-line" />}
+                  {i < pipelineSteps.length - 1 && <div className="pipeline-line" />}
                 </div>
                 <div className="pipeline-content">
                   <div className="pipeline-step-name">{step.name}</div>

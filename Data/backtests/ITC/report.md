@@ -1,6 +1,6 @@
 # QuantEdge -- Backtest Report [ITC]
 
-**Generated:** 2026-09-23 16:09:56
+**Generated:** 2026-09-28 10:10:53
 
 > [!CAUTION]
 > This is a **historical simulation only**. Past simulation results do NOT

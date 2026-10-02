@@ -1,0 +1,815 @@
+{
+  "symbol": "ITC",
+  "generated_at": "2026-09-28T11:51:28.403180",
+  "total_windows": 35,
+  "ok_windows": 30,
+  "zero_trade_windows": 4,
+  "insufficient_data_windows": 1,
+  "windows": [
+    {
+      "window_index": 0,
+      "dev_start": "2005-04-01",
+      "dev_end": "2008-03-31",
+      "dev_rows": 751,
+      "test_start": "2008-04-01",
+      "test_end": "2008-10-01",
+      "test_rows": 126,
+      "status": "OK",
+      "strategy": {
+        "num_trades": 1,
+        "total_return_pct": -1.0205,
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "max_drawdown_pct": -1.4196,
+        "final_equity": 98979.5245
+      },
+      "buy_and_hold": {
+        "total_return_pct": -7.6837,
+        "final_equity": 92316.3424
+      },
+      "excess_return_pct": 6.6632
+    },
+    {
+      "window_index": 1,
+      "dev_start": "2005-04-01",
+      "dev_end": "2008-09-30",
+      "dev_rows": 876,
+      "test_start": "2008-10-01",
+      "test_end": "2009-04-01",
+      "test_rows": 119,
+      "status": "OK",
+      "strategy": {
+        "num_trades": 1,
+        "total_return_pct": -0.072,
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "max_drawdown_pct": -0.5873,
+        "final_equity": 99928.0288
+      },
+      "buy_and_hold": {
+        "total_return_pct": -3.1646,
+        "final_equity": 96835.3784
+      },
+      "excess_return_pct": 3.0926
+    },
+    {
+      "window_index": 2,
+      "dev_start": "2005-04-01",
+      "dev_end": "2009-03-31",
+      "dev_rows": 994,
+      "test_start": "2009-04-01",
+      "test_end": "2009-10-01",
+      "test_rows": 124,
+      "status": "OK",
+      "strategy": {
+        "num_trades": 2,
+        "total_return_pct": 1.0326,
+        "win_rate": 0.5,
+        "profit_factor": 7.5318,
+        "max_drawdown_pct": -1.1114,
+        "final_equity": 101032.6361
+      },
+      "buy_and_hold": {
+        "total_return_pct": 25.383,
+        "final_equity": 125383.0498
+      },
+      "excess_return_pct": -24.3504
+    },
+    {
+      "window_index": 3,
+      "dev_start": "2005-04-01",
+      "dev_end": "2009-09-30",
+      "dev_rows": 1117,
+      "test_start": "2009-10-01",
+      "test_end": "2010-04-01",
+      "test_rows": 122,
+      "status": "OK",
+      "strategy": {
+        "num_trades": 2,
+        "total_return_pct": -2.0304,
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "max_drawdown_pct": -2.0867,
+        "final_equity": 97969.6344
+      },
+      "buy_and_hold": {
+        "total_return_pct": 13.2289,
+        "final_equity": 113228.8946
+      },
+      "excess_return_pct": -15.2593
+    },
+    {
+      "window_index": 4,
+      "dev_start": "2005-04-01",
+      "dev_end": "2010-03-31",
+      "dev_rows": 1238,
+      "test_start": "2010-04-01",
+      "test_end": "2010-10-01",
+      "test_rows": 129,
+      "status": "OK",
+      "strategy": {
+        "num_trades": 4,
+        "total_return_pct": -1.0417,
+        "win_rate": 0.5,
+        "profit_factor": 0.4353,
+        "max_drawdown_pct": -2.4695,
+        "final_equity": 98958.3226
+      },
+      "buy_and_hold": {
+        "total_return_pct": 35.0869,
+        "final_equity": 135086.8739
+      },
+      "excess_return_pct": -36.1286
+    },
+    {
+      "window_index": 5,
+      "dev_start": "2005-04-01",
+      "dev_end": "2010-09-30",
+      "dev_rows": 1366,
+      "test_start": "2010-10-01",
+      "test_end": "2011-04-01",
+      "test_rows": 127,
+      "status": "OK",
+      "strategy": {
+        "num_trades": 2,
+        "total_return_pct": -0.2702,
+        "win_rate": 0.5,
+        "profit_factor": 0.0386,
+        "max_drawdown_pct": -1.1057,
+        "final_equity": 99729.8131
+      },
+      "buy_and_hold": {
+        "total_return_pct": 1.8106,
+        "final_equity": 101810.6457
+      },
+      "excess_return_pct": -2.0808
+    },
+    {
+      "window_index": 6,
+      "dev_start": "2005-04-01",
+      "dev_end": "2011-03-31",
+      "dev_rows": 1492,
+      "test_start": "2011-04-01",
+      "test_end": "2011-09-30",
+      "test_rows": 125,
+      "status": "OK",
+      "strategy": {
+        "num_trades": 3,
+        "total_return_pct": -1.5604,
+        "win_rate": 0.3333,
+        "profit_factor": 0.2409,
+        "max_drawdown_pct": -2.7738,
+        "final_equity": 98439.5971
+      },
+      "buy_and_hold": {
+        "total_return_pct": 8.5516,
+        "final_equity": 108551.6193
+      },
+      "excess_return_pct": -10.112
+    },
+    {
+      "window_index": 7,
+      "dev_start": "2005-04-01",
+      "dev_end": "2011-09-30",
+      "dev_rows": 1617,
+      "test_start": "2011-10-03",
+      "test_end": "2012-03-30",
+      "test_rows": 124,
+      "status": "OK",
+      "strategy": {
+        "num_trades": 3,
+        "total_return_pct": -1.1198,
+        "win_rate": 0.3333,
+        "profit_factor": 0.4563,
+        "max_drawdown_pct": -2.1653,
+        "final_equity": 98880.1655
+      },
+      "buy_and_hold": {
+        "total_return_pct": 15.9289,
+        "final_equity": 115928.9411
+      },
+      "excess_return_pct": -17.0487
+    },
+    {
+      "window_index": 8,
+      "dev_start": "2005-04-01",
+      "dev_end": "2012-03-30",
+      "dev_rows": 1741,
+      "test_start": "2012-04-02",
+      "test_end": "2012-10-01",
+      "test_rows": 127,
+      "status": "OK",
+      "strategy": {
+        "num_trades": 2,
+        "total_return_pct": -2.0592,
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "max_drawdown_pct": -2.0592,
+        "final_equity": 97940.836
+      },
+      "buy_and_hold": {
+        "total_return_pct": 19.8985,
+        "final_equity": 119898.4606
+      },
+      "excess_return_pct": -21.9577
+    },
+    {
+      "window_index": 9,
+      "dev_start": "2005-04-01",
+      "dev_end": "2012-09-28",
+      "dev_rows": 1867,
+      "test_start": "2012-10-01",
+      "test_end": "2013-04-01",
+      "test_rows": 124,
+      "status": "OK",
+      "strategy": {
+        "num_trades": 3,
+        "total_return_pct": -1.5898,
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "max_drawdown_pct": -1.5898,
+        "final_equity": 98410.2455
+      },
+      "buy_and_hold": {
+        "total_return_pct": 12.9239,
+        "final_equity": 112923.9275
+      },
+      "excess_return_pct": -14.5137
+    },
+    {
+      "window_index": 10,
+      "dev_start": "2005-04-01",
+      "dev_end": "2013-03-28",
+      "dev_rows": 1990,
+      "test_start": "2013-04-01",
+      "test_end": "2013-10-01",
+      "test_rows": 127,
+      "status": "OK",
+      "strategy": {
+        "num_trades": 3,
+        "total_return_pct": -1.2697,
+        "win_rate": 0.3333,
+        "profit_factor": 0.3828,
+        "max_drawdown_pct": -3.7732,
+        "final_equity": 98730.3166
+      },
+      "buy_and_hold": {
+        "total_return_pct": 10.7665,
+        "final_equity": 110766.4819
+      },
+      "excess_return_pct": -12.0362
+    },
+    {
+      "window_index": 11,
+      "dev_start": "2005-04-01",
+      "dev_end": "2013-09-30",
+      "dev_rows": 2116,
+      "test_start": "2013-10-01",
+      "test_end": "2014-04-01",
+      "test_rows": 126,
+      "status": "OK",
+      "strategy": {
+        "num_trades": 1,
+        "total_return_pct": 1.306,
+        "win_rate": 1.0,
+        "profit_factor": null,
+        "max_drawdown_pct": -0.9364,
+        "final_equity": 101305.986
+      },
+      "buy_and_hold": {
+        "total_return_pct": 3.1961,
+        "final_equity": 103196.1161
+      },
+      "excess_return_pct": -1.8901
+    },
+    {
+      "window_index": 12,
+      "dev_start": "2005-04-01",
+      "dev_end": "2014-03-31",
+      "dev_rows": 2241,
+      "test_start": "2014-04-01",
+      "test_end": "2014-10-01",
+      "test_rows": 124,
+      "status": "OK",
+      "strategy": {
+        "num_trades": 1,
+        "total_return_pct": -0.488,
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "max_drawdown_pct": -0.9864,
+        "final_equity": 99511.9695
+      },
+      "buy_and_hold": {
+        "total_return_pct": 2.7879,
+        "final_equity": 102787.8555
+      },
+      "excess_return_pct": -3.2759
+    },
+    {
+      "window_index": 13,
+      "dev_start": "2005-04-01",
+      "dev_end": "2014-09-30",
+      "dev_rows": 2364,
+      "test_start": "2014-10-01",
+      "test_end": "2015-04-01",
+      "test_rows": 121,
+      "status": "OK",
+      "strategy": {
+        "num_trades": 3,
+        "total_return_pct": -3.0456,
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "max_drawdown_pct": -3.4247,
+        "final_equity": 96954.3603
+      },
+      "buy_and_hold": {
+        "total_return_pct": -10.3198,
+        "final_equity": 89680.2316
+      },
+      "excess_return_pct": 7.2742
+    },
+    {
+      "window_index": 14,
+      "dev_start": "2005-04-01",
+      "dev_end": "2015-03-31",
+      "dev_rows": 2484,
+      "test_start": "2015-04-01",
+      "test_end": "2015-10-01",
+      "test_rows": 126,
+      "status": "ZERO_TRADES",
+      "strategy": {
+        "num_trades": 0,
+        "total_return_pct": 0.0,
+        "win_rate": null,
+        "profit_factor": null,
+        "max_drawdown_pct": 0.0,
+        "final_equity": 100000.0
+      },
+      "buy_and_hold": {
+        "total_return_pct": 0.6912,
+        "final_equity": 100691.1661
+      },
+      "excess_return_pct": -0.6912
+    },
+    {
+      "window_index": 15,
+      "dev_start": "2005-04-01",
+      "dev_end": "2015-09-30",
+      "dev_rows": 2609,
+      "test_start": "2015-10-01",
+      "test_end": "2016-04-01",
+      "test_rows": 123,
+      "status": "ZERO_TRADES",
+      "strategy": {
+        "num_trades": 0,
+        "total_return_pct": 0.0,
+        "win_rate": null,
+        "profit_factor": null,
+        "max_drawdown_pct": 0.0,
+        "final_equity": 100000.0
+      },
+      "buy_and_hold": {
+        "total_return_pct": 2.544,
+        "final_equity": 102543.9801
+      },
+      "excess_return_pct": -2.544
+    },
+    {
+      "window_index": 16,
+      "dev_start": "2005-04-01",
+      "dev_end": "2016-03-31",
+      "dev_rows": 2731,
+      "test_start": "2016-04-01",
+      "test_end": "2016-09-30",
+      "test_rows": 124,
+      "status": "OK",
+      "strategy": {
+        "num_trades": 2,
+        "total_return_pct": 0.3265,
+        "win_rate": 0.5,
+        "profit_factor": 1.3142,
+        "max_drawdown_pct": -1.259,
+        "final_equity": 100326.5071
+      },
+      "buy_and_hold": {
+        "total_return_pct": 11.4125,
+        "final_equity": 111412.5394
+      },
+      "excess_return_pct": -11.086
+    },
+    {
+      "window_index": 17,
+      "dev_start": "2005-04-01",
+      "dev_end": "2016-09-30",
+      "dev_rows": 2855,
+      "test_start": "2016-10-03",
+      "test_end": "2017-03-31",
+      "test_rows": 124,
+      "status": "OK",
+      "strategy": {
+        "num_trades": 2,
+        "total_return_pct": -0.0445,
+        "win_rate": 0.5,
+        "profit_factor": 0.8171,
+        "max_drawdown_pct": -1.6108,
+        "final_equity": 99955.4541
+      },
+      "buy_and_hold": {
+        "total_return_pct": 14.5504,
+        "final_equity": 114550.3832
+      },
+      "excess_return_pct": -14.5949
+    },
+    {
+      "window_index": 18,
+      "dev_start": "2005-04-01",
+      "dev_end": "2017-03-31",
+      "dev_rows": 2979,
+      "test_start": "2017-04-03",
+      "test_end": "2017-09-29",
+      "test_rows": 124,
+      "status": "OK",
+      "strategy": {
+        "num_trades": 3,
+        "total_return_pct": -2.02,
+        "win_rate": 0.3333,
+        "profit_factor": 0.0145,
+        "max_drawdown_pct": -2.8307,
+        "final_equity": 97979.9901
+      },
+      "buy_and_hold": {
+        "total_return_pct": -8.8395,
+        "final_equity": 91160.4895
+      },
+      "excess_return_pct": 6.8195
+    },
+    {
+      "window_index": 19,
+      "dev_start": "2005-04-01",
+      "dev_end": "2017-09-29",
+      "dev_rows": 3103,
+      "test_start": "2017-10-03",
+      "test_end": "2018-03-28",
+      "test_rows": 122,
+      "status": "OK",
+      "strategy": {
+        "num_trades": 1,
+        "total_return_pct": -0.4262,
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "max_drawdown_pct": -1.0448,
+        "final_equity": 99573.7611
+      },
+      "buy_and_hold": {
+        "total_return_pct": -2.8568,
+        "final_equity": 97143.1593
+      },
+      "excess_return_pct": 2.4306
+    },
+    {
+      "window_index": 20,
+      "dev_start": "2005-04-01",
+      "dev_end": "2018-03-28",
+      "dev_rows": 3225,
+      "test_start": "2018-04-02",
+      "test_end": "2018-10-01",
+      "test_rows": 126,
+      "status": "OK",
+      "strategy": {
+        "num_trades": 2,
+        "total_return_pct": 1.6852,
+        "win_rate": 0.5,
+        "profit_factor": 10.9801,
+        "max_drawdown_pct": -1.1294,
+        "final_equity": 101685.2058
+      },
+      "buy_and_hold": {
+        "total_return_pct": 15.3438,
+        "final_equity": 115343.8131
+      },
+      "excess_return_pct": -13.6586
+    },
+    {
+      "window_index": 21,
+      "dev_start": "2005-04-01",
+      "dev_end": "2018-09-28",
+      "dev_rows": 3350,
+      "test_start": "2018-10-01",
+      "test_end": "2019-04-01",
+      "test_rows": 124,
+      "status": "OK",
+      "strategy": {
+        "num_trades": 1,
+        "total_return_pct": -1.0385,
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "max_drawdown_pct": -1.2067,
+        "final_equity": 98961.4841
+      },
+      "buy_and_hold": {
+        "total_return_pct": -1.3938,
+        "final_equity": 98606.2305
+      },
+      "excess_return_pct": 0.3553
+    },
+    {
+      "window_index": 22,
+      "dev_start": "2005-04-01",
+      "dev_end": "2019-03-29",
+      "dev_rows": 3473,
+      "test_start": "2019-04-01",
+      "test_end": "2019-10-01",
+      "test_rows": 123,
+      "status": "OK",
+      "strategy": {
+        "num_trades": 1,
+        "total_return_pct": -1.0425,
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "max_drawdown_pct": -1.0425,
+        "final_equity": 98957.4979
+      },
+      "buy_and_hold": {
+        "total_return_pct": -13.9954,
+        "final_equity": 86004.6221
+      },
+      "excess_return_pct": 12.9529
+    },
+    {
+      "window_index": 23,
+      "dev_start": "2005-04-01",
+      "dev_end": "2019-09-30",
+      "dev_rows": 3595,
+      "test_start": "2019-10-01",
+      "test_end": "2020-04-01",
+      "test_rows": 126,
+      "status": "ZERO_TRADES",
+      "strategy": {
+        "num_trades": 0,
+        "total_return_pct": 0.0,
+        "win_rate": null,
+        "profit_factor": null,
+        "max_drawdown_pct": 0.0,
+        "final_equity": 100000.0
+      },
+      "buy_and_hold": {
+        "total_return_pct": -35.8533,
+        "final_equity": 64146.6736
+      },
+      "excess_return_pct": 35.8533
+    },
+    {
+      "window_index": 24,
+      "dev_start": "2005-04-01",
+      "dev_end": "2020-03-31",
+      "dev_rows": 3720,
+      "test_start": "2020-04-01",
+      "test_end": "2020-10-01",
+      "test_rows": 126,
+      "status": "OK",
+      "strategy": {
+        "num_trades": 2,
+        "total_return_pct": -1.3841,
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "max_drawdown_pct": -1.6318,
+        "final_equity": 98615.8739
+      },
+      "buy_and_hold": {
+        "total_return_pct": -0.6941,
+        "final_equity": 99305.9358
+      },
+      "excess_return_pct": -0.69
+    },
+    {
+      "window_index": 25,
+      "dev_start": "2005-04-01",
+      "dev_end": "2020-09-30",
+      "dev_rows": 3845,
+      "test_start": "2020-10-01",
+      "test_end": "2021-04-01",
+      "test_rows": 125,
+      "status": "OK",
+      "strategy": {
+        "num_trades": 4,
+        "total_return_pct": -4.0225,
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "max_drawdown_pct": -4.1792,
+        "final_equity": 95977.4821
+      },
+      "buy_and_hold": {
+        "total_return_pct": 25.8289,
+        "final_equity": 125828.9239
+      },
+      "excess_return_pct": -29.8514
+    },
+    {
+      "window_index": 26,
+      "dev_start": "2005-04-01",
+      "dev_end": "2021-03-31",
+      "dev_rows": 3969,
+      "test_start": "2021-04-01",
+      "test_end": "2021-10-01",
+      "test_rows": 125,
+      "status": "OK",
+      "strategy": {
+        "num_trades": 3,
+        "total_return_pct": -1.8486,
+        "win_rate": 0.3333,
+        "profit_factor": 0.1056,
+        "max_drawdown_pct": -2.3549,
+        "final_equity": 98151.4326
+      },
+      "buy_and_hold": {
+        "total_return_pct": 6.7622,
+        "final_equity": 106762.1728
+      },
+      "excess_return_pct": -8.6108
+    },
+    {
+      "window_index": 27,
+      "dev_start": "2005-04-01",
+      "dev_end": "2021-09-30",
+      "dev_rows": 4093,
+      "test_start": "2021-10-01",
+      "test_end": "2022-04-01",
+      "test_rows": 125,
+      "status": "OK",
+      "strategy": {
+        "num_trades": 2,
+        "total_return_pct": 0.4282,
+        "win_rate": 0.5,
+        "profit_factor": 1.4161,
+        "max_drawdown_pct": -1.1481,
+        "final_equity": 100428.2132
+      },
+      "buy_and_hold": {
+        "total_return_pct": 7.4673,
+        "final_equity": 107467.2779
+      },
+      "excess_return_pct": -7.0391
+    },
+    {
+      "window_index": 28,
+      "dev_start": "2005-04-01",
+      "dev_end": "2022-03-31",
+      "dev_rows": 4217,
+      "test_start": "2022-04-01",
+      "test_end": "2022-09-30",
+      "test_rows": 125,
+      "status": "OK",
+      "strategy": {
+        "num_trades": 3,
+        "total_return_pct": 1.8964,
+        "win_rate": 0.3333,
+        "profit_factor": 2.1639,
+        "max_drawdown_pct": -2.0706,
+        "final_equity": 101896.3977
+      },
+      "buy_and_hold": {
+        "total_return_pct": 31.7564,
+        "final_equity": 131756.3502
+      },
+      "excess_return_pct": -29.86
+    },
+    {
+      "window_index": 29,
+      "dev_start": "2005-04-01",
+      "dev_end": "2022-09-30",
+      "dev_rows": 4342,
+      "test_start": "2022-10-03",
+      "test_end": "2023-03-31",
+      "test_rows": 124,
+      "status": "OK",
+      "strategy": {
+        "num_trades": 1,
+        "total_return_pct": -0.2875,
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "max_drawdown_pct": -0.6115,
+        "final_equity": 99712.5293
+      },
+      "buy_and_hold": {
+        "total_return_pct": 8.7666,
+        "final_equity": 108766.6274
+      },
+      "excess_return_pct": -9.0541
+    },
+    {
+      "window_index": 30,
+      "dev_start": "2005-04-01",
+      "dev_end": "2023-03-31",
+      "dev_rows": 4466,
+      "test_start": "2023-04-03",
+      "test_end": "2023-09-29",
+      "test_rows": 123,
+      "status": "OK",
+      "strategy": {
+        "num_trades": 1,
+        "total_return_pct": 4.8112,
+        "win_rate": 1.0,
+        "profit_factor": null,
+        "max_drawdown_pct": -1.9576,
+        "final_equity": 104811.2022
+      },
+      "buy_and_hold": {
+        "total_return_pct": 16.1677,
+        "final_equity": 116167.6811
+      },
+      "excess_return_pct": -11.3565
+    },
+    {
+      "window_index": 31,
+      "dev_start": "2005-04-01",
+      "dev_end": "2023-09-29",
+      "dev_rows": 4589,
+      "test_start": "2023-10-03",
+      "test_end": "2024-04-01",
+      "test_rows": 124,
+      "status": "OK",
+      "strategy": {
+        "num_trades": 1,
+        "total_return_pct": -0.3265,
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "max_drawdown_pct": -2.3259,
+        "final_equity": 99673.4982
+      },
+      "buy_and_hold": {
+        "total_return_pct": -3.4299,
+        "final_equity": 96570.146
+      },
+      "excess_return_pct": 3.1034
+    },
+    {
+      "window_index": 32,
+      "dev_start": "2005-04-01",
+      "dev_end": "2024-03-28",
+      "dev_rows": 4712,
+      "test_start": "2024-04-01",
+      "test_end": "2024-10-01",
+      "test_rows": 126,
+      "status": "OK",
+      "strategy": {
+        "num_trades": 2,
+        "total_return_pct": 3.0947,
+        "win_rate": 0.5,
+        "profit_factor": 3.9824,
+        "max_drawdown_pct": -1.3034,
+        "final_equity": 103094.7285
+      },
+      "buy_and_hold": {
+        "total_return_pct": 20.0504,
+        "final_equity": 120050.4171
+      },
+      "excess_return_pct": -16.9557
+    },
+    {
+      "window_index": 33,
+      "dev_start": "2005-04-01",
+      "dev_end": "2024-09-30",
+      "dev_rows": 4837,
+      "test_start": "2024-10-01",
+      "test_end": "2025-04-01",
+      "test_rows": 125,
+      "status": "ZERO_TRADES",
+      "strategy": {
+        "num_trades": 0,
+        "total_return_pct": 0.0,
+        "win_rate": null,
+        "profit_factor": null,
+        "max_drawdown_pct": 0.0,
+        "final_equity": 100000.0
+      },
+      "buy_and_hold": {
+        "total_return_pct": -17.1387,
+        "final_equity": 82861.3493
+      },
+      "excess_return_pct": 17.1387
+    },
+    {
+      "window_index": 34,
+      "dev_start": "2005-04-01",
+      "dev_end": "2025-03-28",
+      "dev_rows": 4961,
+      "test_start": "2025-04-01",
+      "test_end": "2025-05-29",
+      "test_rows": 39,
+      "status": "INSUFFICIENT_DATA",
+      "strategy": {
+        "num_trades": 0,
+        "total_return_pct": 0.0,
+        "win_rate": null,
+        "profit_factor": null,
+        "max_drawdown_pct": 0.0,
+        "final_equity": 100000.0
+      },
+      "buy_and_hold": {
+        "total_return_pct": 0.0,
+        "final_equity": 100000.0
+      },
+      "excess_return_pct": 0.0
+    }
+  ]
+}

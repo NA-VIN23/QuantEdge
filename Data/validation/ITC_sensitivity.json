@@ -1,0 +1,123 @@
+[
+  {
+    "param_name": "risk_per_trade",
+    "param_value": 0.005,
+    "is_baseline": false,
+    "num_trades": 70,
+    "total_return_pct": -4.1882,
+    "win_rate": 0.3286,
+    "profit_factor": 0.7859,
+    "max_drawdown_pct": -13.376,
+    "final_equity": 95811.81
+  },
+  {
+    "param_name": "risk_per_trade",
+    "param_value": 0.01,
+    "is_baseline": true,
+    "num_trades": 70,
+    "total_return_pct": -8.5353,
+    "win_rate": 0.3286,
+    "profit_factor": 0.7771,
+    "max_drawdown_pct": -25.143,
+    "final_equity": 91464.7094
+  },
+  {
+    "param_name": "risk_per_trade",
+    "param_value": 0.015,
+    "is_baseline": false,
+    "num_trades": 70,
+    "total_return_pct": -13.0009,
+    "win_rate": 0.3286,
+    "profit_factor": 0.768,
+    "max_drawdown_pct": -35.355,
+    "final_equity": 86999.1319
+  },
+  {
+    "param_name": "risk_per_trade",
+    "param_value": 0.02,
+    "is_baseline": false,
+    "num_trades": 70,
+    "total_return_pct": -17.3659,
+    "win_rate": 0.3286,
+    "profit_factor": 0.7614,
+    "max_drawdown_pct": -44.195,
+    "final_equity": 82634.1405
+  },
+  {
+    "param_name": "atr_multiplier",
+    "param_value": 1.5,
+    "is_baseline": false,
+    "num_trades": 72,
+    "total_return_pct": -9.2832,
+    "win_rate": 0.2917,
+    "profit_factor": 0.8029,
+    "max_drawdown_pct": -28.78,
+    "final_equity": 90716.8129
+  },
+  {
+    "param_name": "atr_multiplier",
+    "param_value": 2.0,
+    "is_baseline": true,
+    "num_trades": 70,
+    "total_return_pct": -8.5353,
+    "win_rate": 0.3286,
+    "profit_factor": 0.7771,
+    "max_drawdown_pct": -25.143,
+    "final_equity": 91464.7094
+  },
+  {
+    "param_name": "atr_multiplier",
+    "param_value": 2.5,
+    "is_baseline": false,
+    "num_trades": 70,
+    "total_return_pct": -7.5532,
+    "win_rate": 0.3286,
+    "profit_factor": 0.761,
+    "max_drawdown_pct": -21.673,
+    "final_equity": 92446.762
+  },
+  {
+    "param_name": "atr_multiplier",
+    "param_value": 3.0,
+    "is_baseline": false,
+    "num_trades": 70,
+    "total_return_pct": -5.7617,
+    "win_rate": 0.3286,
+    "profit_factor": 0.7792,
+    "max_drawdown_pct": -17.944,
+    "final_equity": 94238.3293
+  },
+  {
+    "param_name": "commission_rate",
+    "param_value": 0.0005,
+    "is_baseline": true,
+    "num_trades": 70,
+    "total_return_pct": -8.5353,
+    "win_rate": 0.3286,
+    "profit_factor": 0.7771,
+    "max_drawdown_pct": -25.143,
+    "final_equity": 91464.7094
+  },
+  {
+    "param_name": "commission_rate",
+    "param_value": 0.001,
+    "is_baseline": false,
+    "num_trades": 70,
+    "total_return_pct": -9.9415,
+    "win_rate": 0.3286,
+    "profit_factor": 0.7449,
+    "max_drawdown_pct": -26.0389,
+    "final_equity": 90058.4728
+  },
+  {
+    "param_name": "commission_rate",
+    "param_value": 0.002,
+    "is_baseline": false,
+    "num_trades": 70,
+    "total_return_pct": -12.6687,
+    "win_rate": 0.3,
+    "profit_factor": 0.6865,
+    "max_drawdown_pct": -27.8133,
+    "final_equity": 87331.2749
+  }
+]

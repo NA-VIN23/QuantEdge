@@ -47,7 +47,7 @@ export function BacktestLab() {
       </div>
 
       <div className="disclaimer">
-        <strong>Important:</strong> This is a historical backtest simulation on ITC data (2005–2025).
+        <strong>Important:</strong> This is a historical backtest simulation on {symbol} data.
         Results reflect the strategy's performance on past data only. They do not predict
         future returns. Strategy parameters are fixed from Sprint 2 and cannot be modified here.
       </div>

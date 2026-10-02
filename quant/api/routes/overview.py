@@ -1,4 +1,4 @@
-﻿"""
+"""
 quant/api/routes/overview.py
 -----------------------------
 Sprint 5: Updated overview endpoint supporting optional symbol query param.
@@ -35,7 +35,7 @@ def get_overview(
     Merged snapshot of the current research state for one symbol.
     Defaults to ITC for backward compatibility.
     """
-    sym = (symbol or "ITC").upper()
+    sym = (symbol if isinstance(symbol, str) and symbol else "ITC").upper()
 
     if sym not in VALID_SYMBOLS:
         raise HTTPException(

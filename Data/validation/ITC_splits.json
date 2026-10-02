@@ -1,0 +1,360 @@
+{
+  "symbol": "ITC",
+  "generated_at": "2026-09-28T11:51:28.388130",
+  "total_windows": 35,
+  "ok_windows": 30,
+  "zero_trade_windows": 4,
+  "insufficient_data_windows": 1,
+  "windows": [
+    {
+      "window_index": 0,
+      "dev_start": "2005-04-01",
+      "dev_end": "2008-03-31",
+      "dev_rows": 751,
+      "test_start": "2008-04-01",
+      "test_end": "2008-10-01",
+      "test_rows": 126,
+      "status": "OK"
+    },
+    {
+      "window_index": 1,
+      "dev_start": "2005-04-01",
+      "dev_end": "2008-09-30",
+      "dev_rows": 876,
+      "test_start": "2008-10-01",
+      "test_end": "2009-04-01",
+      "test_rows": 119,
+      "status": "OK"
+    },
+    {
+      "window_index": 2,
+      "dev_start": "2005-04-01",
+      "dev_end": "2009-03-31",
+      "dev_rows": 994,
+      "test_start": "2009-04-01",
+      "test_end": "2009-10-01",
+      "test_rows": 124,
+      "status": "OK"
+    },
+    {
+      "window_index": 3,
+      "dev_start": "2005-04-01",
+      "dev_end": "2009-09-30",
+      "dev_rows": 1117,
+      "test_start": "2009-10-01",
+      "test_end": "2010-04-01",
+      "test_rows": 122,
+      "status": "OK"
+    },
+    {
+      "window_index": 4,
+      "dev_start": "2005-04-01",
+      "dev_end": "2010-03-31",
+      "dev_rows": 1238,
+      "test_start": "2010-04-01",
+      "test_end": "2010-10-01",
+      "test_rows": 129,
+      "status": "OK"
+    },
+    {
+      "window_index": 5,
+      "dev_start": "2005-04-01",
+      "dev_end": "2010-09-30",
+      "dev_rows": 1366,
+      "test_start": "2010-10-01",
+      "test_end": "2011-04-01",
+      "test_rows": 127,
+      "status": "OK"
+    },
+    {
+      "window_index": 6,
+      "dev_start": "2005-04-01",
+      "dev_end": "2011-03-31",
+      "dev_rows": 1492,
+      "test_start": "2011-04-01",
+      "test_end": "2011-09-30",
+      "test_rows": 125,
+      "status": "OK"
+    },
+    {
+      "window_index": 7,
+      "dev_start": "2005-04-01",
+      "dev_end": "2011-09-30",
+      "dev_rows": 1617,
+      "test_start": "2011-10-03",
+      "test_end": "2012-03-30",
+      "test_rows": 124,
+      "status": "OK"
+    },
+    {
+      "window_index": 8,
+      "dev_start": "2005-04-01",
+      "dev_end": "2012-03-30",
+      "dev_rows": 1741,
+      "test_start": "2012-04-02",
+      "test_end": "2012-10-01",
+      "test_rows": 127,
+      "status": "OK"
+    },
+    {
+      "window_index": 9,
+      "dev_start": "2005-04-01",
+      "dev_end": "2012-09-28",
+      "dev_rows": 1867,
+      "test_start": "2012-10-01",
+      "test_end": "2013-04-01",
+      "test_rows": 124,
+      "status": "OK"
+    },
+    {
+      "window_index": 10,
+      "dev_start": "2005-04-01",
+      "dev_end": "2013-03-28",
+      "dev_rows": 1990,
+      "test_start": "2013-04-01",
+      "test_end": "2013-10-01",
+      "test_rows": 127,
+      "status": "OK"
+    },
+    {
+      "window_index": 11,
+      "dev_start": "2005-04-01",
+      "dev_end": "2013-09-30",
+      "dev_rows": 2116,
+      "test_start": "2013-10-01",
+      "test_end": "2014-04-01",
+      "test_rows": 126,
+      "status": "OK"
+    },
+    {
+      "window_index": 12,
+      "dev_start": "2005-04-01",
+      "dev_end": "2014-03-31",
+      "dev_rows": 2241,
+      "test_start": "2014-04-01",
+      "test_end": "2014-10-01",
+      "test_rows": 124,
+      "status": "OK"
+    },
+    {
+      "window_index": 13,
+      "dev_start": "2005-04-01",
+      "dev_end": "2014-09-30",
+      "dev_rows": 2364,
+      "test_start": "2014-10-01",
+      "test_end": "2015-04-01",
+      "test_rows": 121,
+      "status": "OK"
+    },
+    {
+      "window_index": 14,
+      "dev_start": "2005-04-01",
+      "dev_end": "2015-03-31",
+      "dev_rows": 2484,
+      "test_start": "2015-04-01",
+      "test_end": "2015-10-01",
+      "test_rows": 126,
+      "status": "ZERO_TRADES"
+    },
+    {
+      "window_index": 15,
+      "dev_start": "2005-04-01",
+      "dev_end": "2015-09-30",
+      "dev_rows": 2609,
+      "test_start": "2015-10-01",
+      "test_end": "2016-04-01",
+      "test_rows": 123,
+      "status": "ZERO_TRADES"
+    },
+    {
+      "window_index": 16,
+      "dev_start": "2005-04-01",
+      "dev_end": "2016-03-31",
+      "dev_rows": 2731,
+      "test_start": "2016-04-01",
+      "test_end": "2016-09-30",
+      "test_rows": 124,
+      "status": "OK"
+    },
+    {
+      "window_index": 17,
+      "dev_start": "2005-04-01",
+      "dev_end": "2016-09-30",
+      "dev_rows": 2855,
+      "test_start": "2016-10-03",
+      "test_end": "2017-03-31",
+      "test_rows": 124,
+      "status": "OK"
+    },
+    {
+      "window_index": 18,
+      "dev_start": "2005-04-01",
+      "dev_end": "2017-03-31",
+      "dev_rows": 2979,
+      "test_start": "2017-04-03",
+      "test_end": "2017-09-29",
+      "test_rows": 124,
+      "status": "OK"
+    },
+    {
+      "window_index": 19,
+      "dev_start": "2005-04-01",
+      "dev_end": "2017-09-29",
+      "dev_rows": 3103,
+      "test_start": "2017-10-03",
+      "test_end": "2018-03-28",
+      "test_rows": 122,
+      "status": "OK"
+    },
+    {
+      "window_index": 20,
+      "dev_start": "2005-04-01",
+      "dev_end": "2018-03-28",
+      "dev_rows": 3225,
+      "test_start": "2018-04-02",
+      "test_end": "2018-10-01",
+      "test_rows": 126,
+      "status": "OK"
+    },
+    {
+      "window_index": 21,
+      "dev_start": "2005-04-01",
+      "dev_end": "2018-09-28",
+      "dev_rows": 3350,
+      "test_start": "2018-10-01",
+      "test_end": "2019-04-01",
+      "test_rows": 124,
+      "status": "OK"
+    },
+    {
+      "window_index": 22,
+      "dev_start": "2005-04-01",
+      "dev_end": "2019-03-29",
+      "dev_rows": 3473,
+      "test_start": "2019-04-01",
+      "test_end": "2019-10-01",
+      "test_rows": 123,
+      "status": "OK"
+    },
+    {
+      "window_index": 23,
+      "dev_start": "2005-04-01",
+      "dev_end": "2019-09-30",
+      "dev_rows": 3595,
+      "test_start": "2019-10-01",
+      "test_end": "2020-04-01",
+      "test_rows": 126,
+      "status": "ZERO_TRADES"
+    },
+    {
+      "window_index": 24,
+      "dev_start": "2005-04-01",
+      "dev_end": "2020-03-31",
+      "dev_rows": 3720,
+      "test_start": "2020-04-01",
+      "test_end": "2020-10-01",
+      "test_rows": 126,
+      "status": "OK"
+    },
+    {
+      "window_index": 25,
+      "dev_start": "2005-04-01",
+      "dev_end": "2020-09-30",
+      "dev_rows": 3845,
+      "test_start": "2020-10-01",
+      "test_end": "2021-04-01",
+      "test_rows": 125,
+      "status": "OK"
+    },
+    {
+      "window_index": 26,
+      "dev_start": "2005-04-01",
+      "dev_end": "2021-03-31",
+      "dev_rows": 3969,
+      "test_start": "2021-04-01",
+      "test_end": "2021-10-01",
+      "test_rows": 125,
+      "status": "OK"
+    },
+    {
+      "window_index": 27,
+      "dev_start": "2005-04-01",
+      "dev_end": "2021-09-30",
+      "dev_rows": 4093,
+      "test_start": "2021-10-01",
+      "test_end": "2022-04-01",
+      "test_rows": 125,
+      "status": "OK"
+    },
+    {
+      "window_index": 28,
+      "dev_start": "2005-04-01",
+      "dev_end": "2022-03-31",
+      "dev_rows": 4217,
+      "test_start": "2022-04-01",
+      "test_end": "2022-09-30",
+      "test_rows": 125,
+      "status": "OK"
+    },
+    {
+      "window_index": 29,
+      "dev_start": "2005-04-01",
+      "dev_end": "2022-09-30",
+      "dev_rows": 4342,
+      "test_start": "2022-10-03",
+      "test_end": "2023-03-31",
+      "test_rows": 124,
+      "status": "OK"
+    },
+    {
+      "window_index": 30,
+      "dev_start": "2005-04-01",
+      "dev_end": "2023-03-31",
+      "dev_rows": 4466,
+      "test_start": "2023-04-03",
+      "test_end": "2023-09-29",
+      "test_rows": 123,
+      "status": "OK"
+    },
+    {
+      "window_index": 31,
+      "dev_start": "2005-04-01",
+      "dev_end": "2023-09-29",
+      "dev_rows": 4589,
+      "test_start": "2023-10-03",
+      "test_end": "2024-04-01",
+      "test_rows": 124,
+      "status": "OK"
+    },
+    {
+      "window_index": 32,
+      "dev_start": "2005-04-01",
+      "dev_end": "2024-03-28",
+      "dev_rows": 4712,
+      "test_start": "2024-04-01",
+      "test_end": "2024-10-01",
+      "test_rows": 126,
+      "status": "OK"
+    },
+    {
+      "window_index": 33,
+      "dev_start": "2005-04-01",
+      "dev_end": "2024-09-30",
+      "dev_rows": 4837,
+      "test_start": "2024-10-01",
+      "test_end": "2025-04-01",
+      "test_rows": 125,
+      "status": "ZERO_TRADES"
+    },
+    {
+      "window_index": 34,
+      "dev_start": "2005-04-01",
+      "dev_end": "2025-03-28",
+      "dev_rows": 4961,
+      "test_start": "2025-04-01",
+      "test_end": "2025-05-29",
+      "test_rows": 39,
+      "status": "INSUFFICIENT_DATA"
+    }
+  ]
+}

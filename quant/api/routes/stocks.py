@@ -1,4 +1,4 @@
-﻿"""
+"""
 quant/api/routes/stocks.py
 --------------------------
 Sprint 5: Generalized stock data endpoints.
@@ -101,9 +101,9 @@ def get_stock_ohlcv(
     except Exception as exc:
         raise HTTPException(status_code=503, detail=f"Could not read data for {symbol}: {exc}")
 
-    if from_date:
+    if isinstance(from_date, str) and from_date:
         df = df[df["date"] >= from_date]
-    if to_date:
+    if isinstance(to_date, str) and to_date:
         df = df[df["date"] <= to_date]
 
     return [
@@ -146,9 +146,9 @@ def get_stock_features(
     except Exception as exc:
         raise HTTPException(status_code=503, detail=f"Could not read features for {symbol}: {exc}")
 
-    if from_date:
+    if isinstance(from_date, str) and from_date:
         df = df[df["date"] >= from_date]
-    if to_date:
+    if isinstance(to_date, str) and to_date:
         df = df[df["date"] <= to_date]
 
     rows = []

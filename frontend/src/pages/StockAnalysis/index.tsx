@@ -80,7 +80,7 @@ export function StockAnalysis() {
   if (loading) return (
     <div className="state-container">
       <div className="spinner" />
-      <div className="state-title">Loading 5,000 rows…</div>
+      <div className="state-title">Loading {symbol} data…</div>
     </div>
   );
 
