@@ -1,6 +1,6 @@
-﻿// src/App.tsx
-// Sprint 5: Parameterized routes for multi-stock support.
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+// src/App.tsx
+// Sprint 5: Parameterized routes for multi-stock support with smooth page transitions.
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { Sidebar }       from './components/layout/Sidebar';
 import { Header }        from './components/layout/Header';
 import { Overview }      from './pages/Overview';
@@ -10,6 +10,28 @@ import { TradeJournal }  from './pages/TradeJournal';
 import { DataCenter }    from './pages/DataCenter';
 import { AssistantPanel } from './components/layout/AssistantPanel';
 
+function AppRoutes() {
+  const location = useLocation();
+
+  return (
+    <div key={location.pathname} className="route-transition-wrapper">
+      <Routes location={location}>
+        <Route path="/"                   element={<Overview />}      />
+        {/* Parameterized routes (Sprint 5) */}
+        <Route path="/stocks/:symbol"     element={<StockAnalysis />} />
+        <Route path="/backtest/:symbol"   element={<BacktestLab />}   />
+        <Route path="/trades/:symbol"     element={<TradeJournal />}  />
+        <Route path="/data/:symbol"       element={<DataCenter />}    />
+        {/* Legacy redirect — old Sprint 4 paths */}
+        <Route path="/backtest"           element={<Navigate to="/backtest/ITC" replace />} />
+        <Route path="/trades"             element={<Navigate to="/trades/ITC" replace />}   />
+        <Route path="/data"               element={<Navigate to="/data/ITC" replace />}     />
+        <Route path="*"                   element={<Navigate to="/" replace />} />
+      </Routes>
+    </div>
+  );
+}
+
 function App() {
   return (
     <BrowserRouter>
@@ -18,19 +40,7 @@ function App() {
         <div className="main-area">
           <Header />
           <AssistantPanel />
-          <Routes>
-            <Route path="/"                   element={<Overview />}      />
-            {/* Parameterized routes (Sprint 5) */}
-            <Route path="/stocks/:symbol"     element={<StockAnalysis />} />
-            <Route path="/backtest/:symbol"   element={<BacktestLab />}   />
-            <Route path="/trades/:symbol"     element={<TradeJournal />}  />
-            <Route path="/data/:symbol"       element={<DataCenter />}    />
-            {/* Legacy redirect — old Sprint 4 paths */}
-            <Route path="/backtest"           element={<Navigate to="/backtest/ITC" replace />} />
-            <Route path="/trades"             element={<Navigate to="/trades/ITC" replace />}   />
-            <Route path="/data"               element={<Navigate to="/data/ITC" replace />}     />
-            <Route path="*"                   element={<Navigate to="/" replace />} />
-          </Routes>
+          <AppRoutes />
         </div>
       </div>
     </BrowserRouter>

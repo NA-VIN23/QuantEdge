@@ -89,8 +89,23 @@ def build_research_context(symbol: str) -> Tuple[str, List[str]]:
     val_wf_data = _load_json(val_wf_path)
     if val_wf_data:
         sources.append(f"{symbol} walk-forward details")
+        compact_wf = {
+            "symbol": val_wf_data.get("symbol"),
+            "total_windows": val_wf_data.get("total_windows"),
+            "ok_windows": val_wf_data.get("ok_windows"),
+            "windows_summary": [
+                {
+                    "window": w.get("window_index"),
+                    "test_range": f"{w.get('test_start')} to {w.get('test_end')}",
+                    "status": w.get("status"),
+                    "strategy_return_pct": w.get("strategy", {}).get("total_return_pct"),
+                    "bh_return_pct": w.get("buy_and_hold", {}).get("total_return_pct"),
+                }
+                for w in val_wf_data.get("windows", [])
+            ]
+        }
         context_parts.append("\n[4. WALK-FORWARD DETAILS]")
-        context_parts.append(json.dumps(val_wf_data, indent=2))
+        context_parts.append(json.dumps(compact_wf, indent=2))
 
     val_sens_path = DATA_ROOT / "validation" / f"{symbol}_sensitivity.json"
     val_sens_data = _load_json(val_sens_path)

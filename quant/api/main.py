@@ -14,9 +14,10 @@ CORS is restricted to localhost:5173 (Vite dev server).
 
 from __future__ import annotations
 
+from pathlib import Path
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv(dotenv_path=Path(__file__).resolve().parents[2] / ".env")
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware

@@ -10,7 +10,7 @@ interface Props {
   initialCapital: number;
 }
 
-const TICK_STYLE = { fill: '#555c75', fontSize: 11 };
+const TICK_STYLE = { fill: '#94a3b8', fontSize: 11, fontFamily: 'var(--font-mono)' };
 
 function formatDate(d: string): string {
   // Show year only for axis labels
@@ -40,18 +40,19 @@ function CustomTooltip({ active, payload }: { active?: boolean; payload?: Toolti
   const d = payload[0].payload;
   return (
     <div style={{
-      background: 'var(--bg-card)',
-      border: '1px solid var(--border)',
-      borderRadius: 'var(--radius)',
+      background: '#ffffff',
+      border: '1px solid #e2e8f0',
+      borderRadius: '8px',
       padding: '10px 14px',
       fontSize: 12,
+      boxShadow: '0 4px 14px rgba(0, 0, 0, 0.08)',
     }}>
-      <div style={{ color: 'var(--text-muted)', marginBottom: 6 }}>{d.date}</div>
-      <div style={{ color: 'var(--text-primary)', fontFamily: 'var(--font-mono)' }}>
+      <div style={{ color: '#94a3b8', marginBottom: 6, fontWeight: 500 }}>{d.date}</div>
+      <div style={{ color: '#0f172a', fontFamily: 'var(--font-mono)', fontWeight: 600 }}>
         Equity: ₹{d.equity.toLocaleString('en-IN', { maximumFractionDigits: 0 })}
       </div>
       {d.position_quantity > 0 && (
-        <div style={{ color: 'var(--text-secondary)', fontSize: 11, marginTop: 4 }}>
+        <div style={{ color: '#475569', fontSize: 11, marginTop: 4 }}>
           Position: {d.position_quantity} shares
         </div>
       )}
@@ -67,11 +68,11 @@ export function EquityCurveChart({ data, initialCapital }: Props) {
       <AreaChart data={sampled} margin={{ top: 10, right: 20, left: 10, bottom: 0 }}>
         <defs>
           <linearGradient id="equityGrad" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="5%"  stopColor="#3b82f6" stopOpacity={0.15} />
-            <stop offset="95%" stopColor="#3b82f6" stopOpacity={0}    />
+            <stop offset="5%"  stopColor="#2563eb" stopOpacity={0.12} />
+            <stop offset="95%" stopColor="#2563eb" stopOpacity={0}    />
           </linearGradient>
         </defs>
-        <CartesianGrid stroke="#1d2030" strokeDasharray="3 3" vertical={false} />
+        <CartesianGrid stroke="#f1f5f9" strokeDasharray="3 3" vertical={false} />
         <XAxis
           dataKey="date"
           tickFormatter={formatDate}
@@ -91,15 +92,15 @@ export function EquityCurveChart({ data, initialCapital }: Props) {
         <Tooltip content={<CustomTooltip />} />
         <ReferenceLine
           y={initialCapital}
-          stroke="#555c75"
+          stroke="#cbd5e1"
           strokeDasharray="4 4"
-          label={{ value: 'Initial', fill: '#555c75', fontSize: 10, position: 'insideTopRight' }}
+          label={{ value: 'Initial', fill: '#94a3b8', fontSize: 10, position: 'insideTopRight' }}
         />
         <Area
           type="monotone"
           dataKey="equity"
-          stroke="#3b82f6"
-          strokeWidth={1.5}
+          stroke="#2563eb"
+          strokeWidth={1.8}
           fill="url(#equityGrad)"
           dot={false}
           name="Equity"
