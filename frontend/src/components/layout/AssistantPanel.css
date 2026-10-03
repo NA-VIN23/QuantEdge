@@ -1,0 +1,514 @@
+/* ============================================================
+   QuantEdge AI Research Assistant — ChatGPT Inspired
+   Mild-White Eye-Comfort Theme & Dynamic Loader
+   ============================================================ */
+
+/* ── Container ───────────────────────────────────────────── */
+.gpt-widget-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+  font-family: var(--font-sans, 'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif);
+}
+
+/* ── Floating AI Ball (Right Bottom - Mild White) ────────── */
+.gpt-floating-ball {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #e2e5eb;
+  background: #fafbfc;
+  color: #19202e;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.08), 0 2px 6px rgba(15, 23, 42, 0.04);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              background 0.2s,
+              border-color 0.2s,
+              box-shadow 0.2s;
+  outline: none;
+}
+
+.gpt-floating-ball:hover {
+  transform: translateY(-2px) scale(1.05);
+  background: #ffffff;
+  border-color: #cbd2dc;
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.12), 0 2px 8px rgba(15, 23, 42, 0.06);
+}
+
+.gpt-floating-ball:active {
+  transform: translateY(0) scale(0.96);
+}
+
+.gpt-floating-ball.open {
+  background: #edf0f5;
+  border-color: #cbd2dc;
+}
+
+.ball-icon {
+  display: block;
+}
+
+/* Accessible text for test runners & screen readers */
+.gpt-ball-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* ── Chat Window (Mild White Theme) ──────────────────────── */
+.gpt-chat-window {
+  position: fixed;
+  bottom: 84px;
+  right: 24px;
+  width: 420px;
+  max-width: calc(100vw - 32px);
+  height: 580px;
+  max-height: calc(100vh - 100px);
+  background: #fafbfc;
+  border: 1px solid #e2e5eb;
+  border-radius: 16px;
+  box-shadow: 0 20px 48px rgba(15, 23, 42, 0.12),
+              0 1px 4px rgba(15, 23, 42, 0.04);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 1000;
+  transition: opacity 0.24s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.24s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.24s;
+}
+
+.gpt-chat-window.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(14px) scale(0.97);
+  pointer-events: none;
+}
+
+.gpt-chat-window.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+/* ── Header ──────────────────────────────────────────────── */
+.gpt-header {
+  height: 52px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #edf0f5;
+  background: #fafbfc;
+  flex-shrink: 0;
+}
+
+.gpt-header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.gpt-header-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #19202e;
+  letter-spacing: -0.2px;
+}
+
+.assistant-symbol-badge {
+  background: #edf0f5;
+  border: 1px solid #e2e5eb;
+  color: #4b5568;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  font-family: var(--font-mono, monospace);
+  letter-spacing: 0.5px;
+}
+
+.gpt-header-right {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.gpt-icon-btn {
+  background: transparent;
+  border: none;
+  color: #8d98aa;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.gpt-icon-btn:hover {
+  background: #edf0f5;
+  color: #19202e;
+}
+
+/* ── Messages Space ──────────────────────────────────────── */
+.gpt-messages-space {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #fafbfc;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd2dc transparent;
+}
+
+.gpt-messages-space::-webkit-scrollbar {
+  width: 5px;
+}
+
+.gpt-messages-space::-webkit-scrollbar-thumb {
+  background: #cbd2dc;
+  border-radius: 4px;
+}
+
+/* ── Empty / Welcome State ───────────────────────────────── */
+.gpt-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: auto 0;
+  padding: 16px 8px;
+  animation: itemReveal 0.3s ease-out;
+}
+
+.gpt-empty-logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid #e2e5eb;
+  background: #ffffff;
+  color: #19202e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+}
+
+.gpt-empty-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #19202e;
+  margin-bottom: 6px;
+  letter-spacing: -0.2px;
+}
+
+.gpt-empty-sub {
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+.gpt-suggestions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.gpt-suggestion-btn {
+  background: #ffffff;
+  border: 1px solid #e2e5eb;
+  color: #334155;
+  padding: 9px 12px;
+  border-radius: 10px;
+  font-size: 12.5px;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  line-height: 1.35;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.02);
+}
+
+.gpt-suggestion-btn:hover:not(:disabled) {
+  background: #edf0f5;
+  border-color: #cbd2dc;
+  color: #19202e;
+  transform: translateY(-1px);
+}
+
+.gpt-suggestion-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ── Message Rows ────────────────────────────────────────── */
+.gpt-row {
+  display: flex;
+  gap: 10px;
+  max-width: 90%;
+  animation: itemReveal 0.25s ease-out;
+}
+
+.gpt-row.user {
+  align-self: flex-end;
+  justify-content: flex-end;
+}
+
+.gpt-row.assistant {
+  align-self: flex-start;
+  width: 100%;
+  max-width: 95%;
+}
+
+.gpt-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #e2e5eb;
+  color: #19202e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.03);
+}
+
+.gpt-bubble {
+  font-size: 13.5px;
+  line-height: 1.6;
+  word-break: break-word;
+}
+
+.gpt-bubble.user {
+  background: #eceff5;
+  color: #19202e;
+  padding: 8px 14px;
+  border-radius: 18px;
+  border-bottom-right-radius: 4px;
+  font-weight: 500;
+  border: 1px solid #e2e5eb;
+}
+
+.gpt-bubble.assistant {
+  color: #1e2432;
+  padding-top: 1px;
+}
+
+.chat-p {
+  margin: 0 0 6px 0;
+}
+
+.chat-p:last-child {
+  margin-bottom: 0;
+}
+
+.chat-bullet {
+  margin: 2px 0 2px 14px;
+  list-style-type: disc;
+}
+
+.chat-gap {
+  height: 6px;
+}
+
+.chat-code {
+  background: #edf0f5;
+  border: 1px solid #e2e5eb;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-family: var(--font-mono, monospace);
+  font-size: 12px;
+  color: #19202e;
+}
+
+/* ── Dynamic Loader Container (Spinner + Cycling Phrases) ── */
+.gpt-loader-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #edf0f5;
+  border: 1px solid #e2e5eb;
+  padding: 8px 14px;
+  border-radius: 16px;
+  border-bottom-left-radius: 4px;
+}
+
+.gpt-spinner-icon {
+  animation: gptSpin 0.8s linear infinite;
+  color: #2563eb;
+  flex-shrink: 0;
+}
+
+@keyframes gptSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.gpt-loader-text {
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #4b5568;
+  animation: gptTextFade 0.3s ease-in-out;
+}
+
+@keyframes gptTextFade {
+  from {
+    opacity: 0;
+    transform: translateY(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gpt-error-box {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 12.5px;
+}
+
+/* ── Sources Footer ──────────────────────────────────────── */
+.gpt-sources-row {
+  padding: 8px 14px;
+  border-top: 1px solid #edf0f5;
+  background: #f4f5f8;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+}
+
+.gpt-sources-label {
+  color: #64748b;
+  font-weight: 600;
+}
+
+.gpt-source-pill {
+  background: #ffffff;
+  color: #4b5568;
+  border: 1px solid #e2e5eb;
+  padding: 1px 7px;
+  border-radius: 10px;
+  font-size: 11px;
+}
+
+/* ── ChatGPT Style Input Wrapper (Mild White) ────────────── */
+.gpt-input-wrapper {
+  padding: 10px 14px 14px;
+  background: #fafbfc;
+  border-top: 1px solid #edf0f5;
+  flex-shrink: 0;
+}
+
+.gpt-input-capsule {
+  background: #edf0f5;
+  border: 1px solid #e2e5eb;
+  border-radius: 24px;
+  padding: 4px 6px 4px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: border-color 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
+}
+
+.gpt-input-capsule:focus-within {
+  border-color: #cbd2dc;
+  background: #ffffff;
+  box-shadow: 0 0 0 2px rgba(25, 32, 46, 0.06);
+}
+
+.gpt-text-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #19202e;
+  font-size: 13.5px;
+  font-family: inherit;
+  padding: 6px 0;
+}
+
+.gpt-text-input::placeholder {
+  color: #8d98aa;
+}
+
+.gpt-text-input:disabled {
+  opacity: 0.6;
+}
+
+/* ── Signature ChatGPT Up-Arrow Send Button (Mild White) ─── */
+.gpt-send-button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e2e5eb;
+  color: #8d98aa;
+  cursor: not-allowed;
+  transition: background 0.18s, color 0.18s, transform 0.12s;
+  flex-shrink: 0;
+}
+
+.gpt-send-button.active {
+  background: #19202e;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.gpt-send-button.active:hover {
+  background: #2a3447;
+  transform: scale(1.04);
+}
+
+.gpt-send-button.active:active {
+  transform: scale(0.96);
+}
+
+/* ── Mobile Responsiveness ───────────────────────────────── */
+@media (max-width: 480px) {
+  .gpt-chat-window {
+    right: 12px;
+    bottom: 74px;
+    width: calc(100vw - 24px);
+    height: 70vh;
+  }
+
+  .gpt-floating-ball {
+    bottom: 16px;
+    right: 16px;
+    width: 46px;
+    height: 46px;
+  }
+}

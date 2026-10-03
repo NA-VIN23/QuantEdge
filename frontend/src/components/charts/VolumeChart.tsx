@@ -7,7 +7,7 @@ import type { FeatureRow } from '../../types';
 
 interface Props { data: FeatureRow[] }
 
-const TICK_STYLE = { fill: '#555c75', fontSize: 11 };
+const TICK_STYLE = { fill: '#94a3b8', fontSize: 11, fontFamily: 'var(--font-mono)' };
 
 function downsample(rows: FeatureRow[], max: number): FeatureRow[] {
   if (rows.length <= max) return rows;
@@ -26,18 +26,19 @@ function VolumeTooltip({ active, payload }: { active?: boolean; payload?: Toolti
   const d = payload[0].payload;
   return (
     <div style={{
-      background: 'var(--bg-card)',
-      border: '1px solid var(--border)',
-      borderRadius: 'var(--radius)',
+      background: '#ffffff',
+      border: '1px solid #e2e8f0',
+      borderRadius: '8px',
       padding: '8px 12px',
       fontSize: 12,
+      boxShadow: '0 4px 14px rgba(0, 0, 0, 0.08)',
     }}>
-      <div style={{ color: 'var(--text-muted)' }}>{d.date}</div>
-      <div style={{ color: 'var(--text-primary)', fontFamily: 'var(--font-mono)', marginTop: 4 }}>
+      <div style={{ color: '#94a3b8' }}>{d.date}</div>
+      <div style={{ color: '#0f172a', fontFamily: 'var(--font-mono)', marginTop: 4, fontWeight: 600 }}>
         Vol: {(d.volume / 1_000_000).toFixed(2)}M
       </div>
       {d.volume_ratio !== null && (
-        <div style={{ color: d.volume_ratio > 1.5 ? 'var(--positive)' : 'var(--text-muted)', fontSize: 11 }}>
+        <div style={{ color: d.volume_ratio > 1.5 ? '#059669' : '#94a3b8', fontSize: 11 }}>
           Ratio: {d.volume_ratio.toFixed(2)}x
         </div>
       )}
@@ -50,7 +51,7 @@ export function VolumeChart({ data }: Props) {
   return (
     <ResponsiveContainer width="100%" height={120}>
       <BarChart data={sampled} margin={{ top: 4, right: 20, left: 10, bottom: 0 }}>
-        <CartesianGrid stroke="#1d2030" strokeDasharray="3 3" vertical={false} />
+        <CartesianGrid stroke="#f1f5f9" strokeDasharray="3 3" vertical={false} />
         <XAxis
           dataKey="date"
           tickFormatter={d => d.substring(0, 4)}
@@ -67,7 +68,7 @@ export function VolumeChart({ data }: Props) {
           tickFormatter={v => `${(v / 1_000_000).toFixed(0)}M`}
         />
         <Tooltip content={<VolumeTooltip />} />
-        <Bar dataKey="volume" fill="#2a3050" radius={[1, 1, 0, 0]} name="Volume" />
+        <Bar dataKey="volume" fill="#93c5fd" radius={[2, 2, 0, 0]} name="Volume" />
       </BarChart>
     </ResponsiveContainer>
   );

@@ -14,10 +14,15 @@ CORS is restricted to localhost:5173 (Vite dev server).
 
 from __future__ import annotations
 
+from pathlib import Path
+from dotenv import load_dotenv
+
+load_dotenv(dotenv_path=Path(__file__).resolve().parents[2] / ".env")
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from quant.api.routes import overview, stocks, backtests, data_quality
+from quant.api.routes import overview, stocks, backtests, data_quality, assistant
 
 app = FastAPI(
     title="QuantEdge Research API",
@@ -40,7 +45,7 @@ app.add_middleware(
         "http://127.0.0.1:4173",
     ],
     allow_credentials=False,
-    allow_methods=["GET"],
+    allow_methods=["GET", "POST", "OPTIONS"],
     allow_headers=["*"],
 )
 
@@ -48,6 +53,7 @@ app.include_router(overview.router, prefix="/api")
 app.include_router(stocks.router,   prefix="/api")
 app.include_router(backtests.router, prefix="/api")
 app.include_router(data_quality.router, prefix="/api")
+app.include_router(assistant.router, prefix="/api")
 
 
 @app.get("/api/health")
